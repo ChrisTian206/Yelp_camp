@@ -41,6 +41,6 @@
     <ul>
         <li>joi</li>
     </ul>
-    <h3>User Exprience</h3>
+    <h3>User Experience</h3>
     <ul>
      <li>Mapbox</li>
