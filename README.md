@@ -1,6 +1,5 @@
  <h1>Yelp_camp</h1>
-    <p>This is an full-stack web application project that allows users to post their favorite campgrounds and view
-        campgrounds posted by other users. Each user can give star rating and comments to a campground.
+    <p>YelpCamp is a dynamic web application that brings outdoor enthusiasts together to discover, share, and explore camping destinations. Built on RESTful principles, the platform offers an intuitive user experience, allowing users to search for campgrounds, view images, and read reviews. Through real-time map integration, users can visualize campground locations and plan their trips effectively. With user authentication and responsive design, YelpCamp provides a secure and seamless experience across devices, showcasing my skills in web development, RESTful APIs, and user-centered design.
     </p>
     <a href="https://wenhaotianwebdev-7fc6fa7197b6.herokuapp.com/">Yelp_camp Website</a>
     <br>
