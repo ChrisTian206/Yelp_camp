@@ -13,7 +13,7 @@
     </ul>
     <h3>Data Storage</h3>
     <ul>
-        <li>MongoDB Altas</li>
+        <li>MongoDB Atlas</li>
         <li>Cloudinary</li>
         <li>multer</li>
         <li>multer-storage-cloudinary</li>
