@@ -1,0 +1,60 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="/campgrounds">Yelp Camp</a>
+
+        <!-- Hamburger menu (collapsed on smaller screens) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar items and links -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <!-- Regular links -->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/campgrounds">All Camps</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/campgrounds/new">New Camp</a>
+                </li>
+
+                <!-- Dropdown menu 1 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="/">Home</a></li>
+                        <li><a class="dropdown-item" href="/campgrounds">All Camps</a></li>
+                        <li><a class="dropdown-item" href="/campgrounds/new">New Camp</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Right-aligned "My Account" dropdown -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        My Account
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <% if(!currentUser) {%>
+                            <li><a class="dropdown-item" href="/login">Sign In</a></li>
+                            <li><a href="/register" class="dropdown-item">Register</a></li>
+                            <% } else{ %>
+                                <li><a class="dropdown-item" href="/logout">Sign Out</a></li>
+                                <% } %>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>

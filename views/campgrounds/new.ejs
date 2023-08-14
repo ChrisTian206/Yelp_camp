@@ -1,0 +1,58 @@
+<% layout('layout/boilerplate') %>
+
+    <div class="row">
+        <h1 class="text-center">New Campground</h1>
+        <div class="col-6 offset-3">
+            <form action="/campgrounds" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label class="form-label" for="title"> Title</label>
+                    <input class="form-control" type="text" id="title" name="campground[title]" required>
+                    <div class="invalid-feedback">Required</div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location"> Location</label>
+                    <input class="form-control" type="text" id="location" name="campground[location]" required>
+                    <div class="invalid-feedback">Required</div>
+
+                </div>
+                <!-- <div class="mb-3">
+                    <label class="form-label" for="image"> Image URL</label>
+                    <input class="form-control" type="text" id="image" name="campground[image]" requied>
+                    <div class="invalid-feedback">
+                        Required
+                    </div>
+                </div> -->
+                <div class="mb-3">
+                    <label for="formFileMultiple" class="form-label">Select Your Images</label>
+                    <input class="form-control" type="file" name="image" id="formFileMultiple" multiple>
+                  </div>
+
+                <!-- <label for="image">Upload Images</label>
+                <input type="file" name="image" id="image" multiple> -->
+
+                <div class="mb-3">
+                    <label class="form-label" for="price">Price</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="price-label">$</span>
+                        <input type="text" id="price" class="form-control" aria-label="Amount (to the nearest dollar)"
+                            placeholder="0.00" name="campground[price]" required>
+                        <div class="invalid-feedback">Required</div>
+
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="description"> Description </label>
+                    <textarea class="form-control" type="text" id="description" name="campground[description]"
+                        requied></textarea>
+                    <div class="invalid-feedback">
+                        Required
+                    </div>
+                </div>
+
+                <button class="btn btn-success mb-3">Add Campground</button>
+            </form>
+
+            <a class="btn btn-success" href="/campgrounds">All Campgrounds</a>
+        </div>
+    </div>
