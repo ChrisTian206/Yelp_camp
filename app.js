@@ -1,20 +1,20 @@
-//Unsplash Access Key and Secret Key
-// O7YrJs7kSjAJpl6O4D84LayyUgw1sl06wrKuAKWTb0U
-// Zk_82i0gKfA8C4kXZkJ2A9zt-8hjRrKLeGUcWXrLpWQ
-//B21QKXQNlX2XPg1I
-
 if (process.env.NODE_ENV !== "production") {
     require('dotenv').config();
 }
 
+//back-end server
 const express = require('express');
 const app = express();
 const path = require('path');
+
+//mongoDB
 const mongoose = require('mongoose');
+const MongoDBStore = require('connect-mongo')(session);
+
+//for delete and update requests
 const methodOverride = require('method-override');
 const ejsMate = require('ejs-mate');
 const session = require('express-session');
-const MongoDBStore = require('connect-mongo')(session);
 const flash = require('connect-flash');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
@@ -23,6 +23,7 @@ const mongoSanitize = require('express-mongo-sanitize')
 const ExpressError = require('./utils/ExpressError')
 const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/yelp-camp'
 
+//routers
 const campgroundRoutes = require('./routes/campgrounds');
 const userRoute = require('./routes/users')
 const reviewsRoutes = require('./routes/reviews')
