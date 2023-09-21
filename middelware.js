@@ -3,6 +3,10 @@ const Campground = require('./models/campground');
 const { campgroundSchema, reviewSchema } = require('./schemas.js');
 const Review = require('./models/review');
 
+
+// how this middelwares are wrote to be used multiple times
+// these function are used in router files.
+// these were passed before the execution of CRUD.
 module.exports.isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
         req.flash('error', "You must be signed in");

@@ -27,6 +27,9 @@ router.route('/:id')
     .put(isLoggedIn, isAuthor, upload.array('image'), validateCampground, catchAsync(campgrounds.updateCampground))
     .delete(isLoggedIn, isAuthor, catchAsync(campgrounds.deleteCampground));
 
+
+// middlewares are passed in this way so that they can be executed before
+// the render of CRUD.
 router.get('/:id/edit', isLoggedIn, isAuthor, catchAsync(campgrounds.renderEditForm))
 
 

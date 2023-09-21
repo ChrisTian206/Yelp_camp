@@ -55,6 +55,7 @@ store.on("error", function (e) {
     console.log("Session store error", e)
 })
 
+// session expired is calculated in ms. This is why 1s is represented as 1000.
 const sessionConfig = {
     store: store,
     secret,
@@ -92,6 +93,8 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+
+//This catches all mis-spelled html in our site.
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404))
 })

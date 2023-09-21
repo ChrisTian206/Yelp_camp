@@ -7,6 +7,7 @@ const ImageSchema = new Schema({
     filename: String
 })
 
+//This is Cloudinary way of getting smaller size thumbnails.
 ImageSchema.virtual('thumbnail').get(function () {
     return this.url.replace('/upload', '/upload/w_200')
 })

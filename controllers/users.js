@@ -1,5 +1,6 @@
 const User = require('../models/user');
 
+//functions are established here, will be used in router file
 module.exports.renderRegister = (req, res) => {
     res.render('users/register');
 }

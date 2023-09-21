@@ -25,6 +25,7 @@ const extension = (joi) => ({
 
 const Joi = BaseJoi.extend(extension)
 
+//Joi's data type is established this way, gotta get used to it.
 module.exports.campgroundSchema = Joi.object({
     campground: Joi.object({
         title: Joi.string().required().escapeHTML(),
