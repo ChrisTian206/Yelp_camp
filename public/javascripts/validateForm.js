@@ -1,5 +1,6 @@
 (() => {
     'use strict'
+    //Strict mode helps to prevent errors and security vulnerabilities.
 
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll('.needs-validation')

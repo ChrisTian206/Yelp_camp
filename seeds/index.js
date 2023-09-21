@@ -16,19 +16,6 @@ const sample = (array) => {
     return array[Math.floor(Math.random() * array.length)];
 }
 
-async function seedImg() {
-    try {
-        const resp = await axios.get('https://api.unsplash.com/photos/random', {
-            params: {
-                client_id: 'O7YrJs7kSjAJpl6O4D84LayyUgw1sl06wrKuAKWTb0U',
-                collections: 1114848,
-            },
-        })
-        return resp.data.urls.small
-    } catch (err) {
-        console.error(err)
-    }
-}
 
 const seedDB = async () => {
     await campGround.deleteMany({});
