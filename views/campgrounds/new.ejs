@@ -3,6 +3,10 @@
     <div class="row">
         <h1 class="text-center">New Campground</h1>
         <div class="col-6 offset-3">
+            <!-- keyword "needs-validation" defined by me to be used in ./public/javascript/validateForm.js -->
+            <!-- validateForm.js will select all queries with class "needs-validation"， add a eventListener -->
+            <!-- that prevent defualt behavior of submitting it so that the form can be handover to our own -->
+            <!-- validation methods. -->
             <form action="/campgrounds" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label class="form-label" for="title"> Title</label>

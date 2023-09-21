@@ -1,3 +1,5 @@
+//initiate app.js based on env.mode
+// if in dev mode, run seeds for MongoDB
 if (process.env.NODE_ENV !== "production") {
     require('dotenv').config();
 }
@@ -16,10 +18,10 @@ const methodOverride = require('method-override');
 const ejsMate = require('ejs-mate');
 const session = require('express-session');
 const flash = require('connect-flash');
-const passport = require('passport');
+const passport = require('passport');   // user auth
 const LocalStrategy = require('passport-local');
 const User = require('./models/user')
-const mongoSanitize = require('express-mongo-sanitize')
+const mongoSanitize = require('express-mongo-sanitize') //prevent injection
 const ExpressError = require('./utils/ExpressError')
 const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/yelp-camp'
 
